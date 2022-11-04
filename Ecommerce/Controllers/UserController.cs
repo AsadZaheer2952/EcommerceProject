@@ -1,5 +1,6 @@
 ﻿
 
+using DocumentFormat.OpenXml.InkML;
 using Ecommerce.Model;
 using Ecommerce.Repository;
 using Microsoft.AspNetCore.Authorization;
@@ -22,12 +23,12 @@ namespace Ecommerce.Controllers
             
            
         }
-        [HttpGet("GetAll"), Authorize(Roles = "SuperAdmin")]
-        public async Task<IActionResult> GetAll()
+        [HttpGet("GetAll")]
+        public async Task<List<SignUpModel>> GetAll()
         {
        
             var users = await _accountRepo.GetAllUser();
-            return Ok(users);
+            return users;
         }
       
 
@@ -115,7 +116,8 @@ namespace Ecommerce.Controllers
                 return StatusCode(401,ex);
             }
         }
+      
 
-            
+
     }
 }

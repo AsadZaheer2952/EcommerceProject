@@ -59,7 +59,7 @@ namespace Ecommerce.Repository
         public async Task<Category> GetCategoryById(Guid CategoryId)
         {
             var records = await _context.Categories.Where(i => i.CategoryId == CategoryId).FirstOrDefaultAsync();
-            return (records);
+            return records;
         }
         public async Task<dynamic> CategoryPagination(Pagination pagination)
         {

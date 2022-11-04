@@ -15,6 +15,7 @@ namespace Ecommerce.Repository
     {
         private readonly EcommStoreContext _context;
         public readonly IConfiguration _configuration;
+        
         public AccountRepository(EcommStoreContext context, IConfiguration configuration)
         {
             _context = context;
@@ -24,7 +25,7 @@ namespace Ecommerce.Repository
         public async Task<object> SignUp(SignUpModel signUpModel)
         {
             var records = await _context.SignUp.Where(i => i.Email == signUpModel.Email).FirstOrDefaultAsync();
-            if(records!= null)
+            if (records != null)
             {
                 return new
                 {
@@ -33,7 +34,7 @@ namespace Ecommerce.Repository
             }
             var signup = new SignUpModel()
             {
-               
+
                 FirstName = signUpModel.FirstName,
                 LastName = signUpModel.LastName,
                 Email = signUpModel.Email,
@@ -114,7 +115,7 @@ namespace Ecommerce.Repository
         }
         public async Task<List<SignUpModel>> GetAllUser()
         {
-            var userrecord= await _context.SignUp.Select(x => new SignUpModel()
+            var userrecord = await _context.SignUp.Select(x => new SignUpModel()
             {
                 User_Id = x.User_Id,
                 FirstName = x.FirstName,
@@ -127,9 +128,9 @@ namespace Ecommerce.Repository
             }).ToListAsync();
             return (userrecord);
         }
-        public async Task DeleteUser( string Email)
+        public async Task DeleteUser(string Email)
         {
-             var delete = _context.SignUp.Where(i => i.Email == Email).FirstOrDefault();
+            var delete = _context.SignUp.Where(i => i.Email == Email).FirstOrDefault();
 
 
             _context.SignUp.Remove(delete);
@@ -137,26 +138,23 @@ namespace Ecommerce.Repository
 
 
         }
- /*       public async Task <object> AddUser(SignUpModel signUpModel)
+        public async Task<List<SignUpModel>> GetAllUsers()
         {
-            var res = _context.SignUp.Where(i => i.Role == "Admin").FirstOrDefault();
-         
-            var signup = new SignUpModel()
+           
+            var userrecord = await _context.SignUp.Select(x => new SignUpModel()
             {
+                User_Id = x.User_Id,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                Email = x.Email,
+                Password = x.Password,
+                ConfirmPassword = x.ConfirmPassword,
+                Role = x.Role
 
-                FirstName = signUpModel.FirstName,
-                LastName = signUpModel.LastName,
-                Email = signUpModel.Email,
-                Password = signUpModel.Password,
-                ConfirmPassword = signUpModel.ConfirmPassword,
-                Role = signUpModel.Role
-            };
-            _context.SignUp.Add(signup);
-            await _context.SaveChangesAsync();
-            return signup;
-        }*/
-      
+            }).ToListAsync();
+            return (userrecord);
+        }
 
-
+ 
     }
 }

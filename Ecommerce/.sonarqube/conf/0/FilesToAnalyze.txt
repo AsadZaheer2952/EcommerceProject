@@ -1,0 +1,56 @@
+﻿E:\firsttask\Ecommerce\Ecommerce\Controllers\CategoryController.cs
+E:\firsttask\Ecommerce\Ecommerce\Controllers\HangfireController.cs
+E:\firsttask\Ecommerce\Ecommerce\Controllers\ProductController.cs
+E:\firsttask\Ecommerce\Ecommerce\Controllers\SubCategoriesController.cs
+E:\firsttask\Ecommerce\Ecommerce\Controllers\UserController.cs
+E:\firsttask\Ecommerce\Ecommerce\Controllers\WeatherForecastController.cs
+E:\firsttask\Ecommerce\Ecommerce\Controllers\WebSocket.cs
+E:\firsttask\Ecommerce\Ecommerce\Data\DataSeeder.cs
+E:\firsttask\Ecommerce\Ecommerce\Data\EcommStoreContext.cs
+E:\firsttask\Ecommerce\Ecommerce\HangFire\Cronjob.cs
+E:\firsttask\Ecommerce\Ecommerce\Middleware\FirstMiddleware.cs
+E:\firsttask\Ecommerce\Ecommerce\Migrations\20221019061040_role.cs
+E:\firsttask\Ecommerce\Ecommerce\Migrations\20221019061040_role.Designer.cs
+E:\firsttask\Ecommerce\Ecommerce\Migrations\20221019061608_init.cs
+E:\firsttask\Ecommerce\Ecommerce\Migrations\20221019061608_init.Designer.cs
+E:\firsttask\Ecommerce\Ecommerce\Migrations\20221020100946_newmodel.cs
+E:\firsttask\Ecommerce\Ecommerce\Migrations\20221020100946_newmodel.Designer.cs
+E:\firsttask\Ecommerce\Ecommerce\Migrations\EcommStoreContextModelSnapshot.cs
+E:\firsttask\Ecommerce\Ecommerce\Model\Category.cs
+E:\firsttask\Ecommerce\Ecommerce\Model\ForgetPassword.cs
+E:\firsttask\Ecommerce\Ecommerce\Model\Login.cs
+E:\firsttask\Ecommerce\Ecommerce\Model\Product.cs
+E:\firsttask\Ecommerce\Ecommerce\Model\ProductCategories.cs
+E:\firsttask\Ecommerce\Ecommerce\Model\SignUpModel.cs
+E:\firsttask\Ecommerce\Ecommerce\Model\Tokens.cs
+E:\firsttask\Ecommerce\Ecommerce\Model\UpdateProfile.cs
+E:\firsttask\Ecommerce\Ecommerce\Model\Upload.cs
+E:\firsttask\Ecommerce\Ecommerce\Model\User.cs
+E:\firsttask\Ecommerce\Ecommerce\Paging\Pagination.cs
+E:\firsttask\Ecommerce\Ecommerce\Program.cs
+E:\firsttask\Ecommerce\Ecommerce\Query\FilterQuery.cs
+E:\firsttask\Ecommerce\Ecommerce\Repository\AccountRepository.cs
+E:\firsttask\Ecommerce\Ecommerce\Repository\CategoryRepository.cs
+E:\firsttask\Ecommerce\Ecommerce\Repository\ExcelexportModel.cs
+E:\firsttask\Ecommerce\Ecommerce\Repository\IAccountRepo.cs
+E:\firsttask\Ecommerce\Ecommerce\Repository\ICategory.cs
+E:\firsttask\Ecommerce\Ecommerce\Repository\IProduct.cs
+E:\firsttask\Ecommerce\Ecommerce\Repository\ISubCategories.cs
+E:\firsttask\Ecommerce\Ecommerce\Repository\ProductRepository.cs
+E:\firsttask\Ecommerce\Ecommerce\Repository\SubCategoriesRepository.cs
+E:\firsttask\Ecommerce\Ecommerce\System\Theading.cs
+E:\firsttask\Ecommerce\Ecommerce\WeatherForecast.cs
+E:\firsttask\Ecommerce\Ecommerce\obj\Debug\net6.0\Ecommerce.GlobalUsings.g.cs
+E:\firsttask\Ecommerce\Ecommerce\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+E:\firsttask\Ecommerce\Ecommerce\obj\Debug\net6.0\Ecommerce.AssemblyInfo.cs
+E:\firsttask\Ecommerce\Ecommerce\obj\Debug\net6.0\Ecommerce.MvcApplicationPartsAssemblyInfo.cs
+E:\firsttask\Ecommerce\Ecommerce\appsettings.Development.json
+E:\firsttask\Ecommerce\Ecommerce\appsettings.json
+E:\firsttask\Ecommerce\Ecommerce\UploadFile\products (1).xlsx
+E:\firsttask\Ecommerce\Ecommerce\UploadFile\products (3) (1).xlsx
+E:\firsttask\Ecommerce\Ecommerce\UploadFile\products (3) (2) (1).xlsx
+E:\firsttask\Ecommerce\Ecommerce\UploadFile\products (3) (2).xlsx
+E:\firsttask\Ecommerce\Ecommerce\UploadFile\products (3) (3) (1).xlsx
+E:\firsttask\Ecommerce\Ecommerce\UploadFile\products (3) (3).xlsx
+E:\firsttask\Ecommerce\Ecommerce\UploadFile\Untitled spreadsheet.xlsx
+E:\firsttask\Ecommerce\Ecommerce\Properties\launchSettings.json

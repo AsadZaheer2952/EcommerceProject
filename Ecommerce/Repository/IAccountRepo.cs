@@ -12,6 +12,9 @@ namespace Ecommerce.Repository
         Task<UpdateProfile> UpdateProfile( UpdateProfile update, string email);
         Task<List<SignUpModel>> GetAllUser();
         Task DeleteUser( string Email);
+        Task<List<SignUpModel>> GetAllUsers();
+  
+
 
     }
 

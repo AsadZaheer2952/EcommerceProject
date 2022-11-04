@@ -9,5 +9,9 @@ namespace Ecommerce.Repository
         Task<Product> GetProductById(Guid ProductId);
         Task UpdateProduct(Guid ProductId, Product product);
         Task DeleteProduct(Guid ProductId);
+        Task<int> UploadExcelFile(Upload uploadRequest);
+        Task<dynamic> ExportExcelFile();
+        Task<dynamic> ExportPdfFile();
+
     }
 }

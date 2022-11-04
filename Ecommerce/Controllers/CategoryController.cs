@@ -15,6 +15,7 @@ namespace Ecommerce.Controllers
         public CategoryController(ICategory category)
         {
             _Category = category;
+
         }
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] Category category)
@@ -22,12 +23,17 @@ namespace Ecommerce.Controllers
 
 
             var add = await _Category.AddCategoryAsync(category);
+            
             return Ok(add);
         }
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAllRecord()
         {
             var record = await _Category.GetAllCategory();
+            if (record.Count == 0)
+            {
+                return NoContent();
+            }
             return Ok(record);
         }
         [HttpGet("{CategoryId}")]

@@ -3,6 +3,7 @@ using Ecommerce.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace Ecommerce.Controllers
 {
@@ -48,5 +49,85 @@ namespace Ecommerce.Controllers
             await _product.DeleteProduct(ProductId);
             return Ok("Successfully deleted");
         }
+        [HttpPost("UploadExcel")]
+        public async Task<IActionResult> UploadExcle([FromForm] Upload upload)
+        { 
+           
+                var result = await _product.UploadExcelFile(upload);
+            return Ok();
+
+
     }
+        [HttpGet("Genrate ExcleFile")]
+        public async Task<IActionResult> ExportFile()
+        {
+            var res = await _product.ExportExcelFile();
+            return File(
+                res,
+                "application/vnd.ms-excel",
+                "products.xlsx"
+
+                );
+        }
+        [HttpGet("Genrate PdfFile")]
+        public async Task<IActionResult> Export()
+        {
+            var result= await _product.ExportPdfFile();
+            return File(
+                result,
+                "application/vnd.ms-pdf",
+                "products.pdf"
+
+                );
+        }
+        [HttpGet("thread")]
+        public async Task<IActionResult> ThreadingTest()
+        {
+                int i = 0;
+                Thread t = new Thread(() =>
+                {
+                    Console.WriteLine("Start Thread.");
+
+                   for (i = 0; i < 10; i++)
+                        Console.WriteLine(i + "Thread Running!");
+
+                    Console.WriteLine("End Thread.");
+                });
+
+
+            Thread t1 = new Thread(() =>
+                           {
+                               Console.WriteLine("Start Thread.");
+
+                               for (i = 0; i < 10; i++)
+                                   Console.WriteLine(i);
+
+                               Console.WriteLine("End Thread.");
+                           });
+            Thread t2= new Thread(() =>
+            {
+                Console.WriteLine("Start Thread.");
+
+                Parallel.For(0, 10, i =>
+                {
+                    Console.WriteLine(i);
+
+                    
+                });
+                });
+            t1.Start();
+            Thread.Sleep(10000);
+            Console.WriteLine("thread sleep");
+            t2.Start();
+            t2.Join();
+            Thread.Sleep(3000);
+            Console.WriteLine("Thread finished. Count: " + i);
+            return Ok(i);
+            
+        }
+      
+
+
+    }
+
 }
